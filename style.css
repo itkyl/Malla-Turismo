@@ -1,1 +1,63 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff0f5; /* Fondo rosa suave */
+  color: #3a3a3a;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #d63384; /* Rosa fuerte para título */
+}
+
+.periodo {
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  border-left: 8px solid #f8c4d9; /* Borde rosado claro */
+}
+
+.periodo h2 {
+  color: #b5179e;
+  margin-top: 0;
+}
+
+.ramo {
+  background: #fce4ec;
+  padding: 12px;
+  margin: 6px 0;
+  border-left: 6px solid #e0a3c4;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+/* Colores por estado */
+.ramo[data-estado="aprobado"] {
+  background: #e8f5e9;
+  border-color: #66bb6a;
+}
+.ramo[data-estado="en_curso"] {
+  background: #fff9c4;
+  border-color: #ffeb3b;
+}
+.ramo[data-estado="pendiente"] {
+  background: #f8d7da;
+  border-color: #f44336;
+}
+
+.prereq {
+  display: none;
+  font-size: 0.9em;
+  color: #6b4e57;
+  margin-left: 10px;
+}
+
+.ramo:hover .prereq {
+  display: block;
+}
 
