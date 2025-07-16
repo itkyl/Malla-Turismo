@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular de Turismo y Hotelería</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .periodo {
+      background: white;
+      margin: 20px auto;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 800px;
+    }
+    .periodo h2 {
+      color: #005f73;
+      margin-top: 0;
+    }
+    .ramo {
+      padding: 8px;
+      margin: 5px 0;
+      border-left: 5px solid #ccc;
+      background: #f0f0f0;
+      cursor: pointer;
+    }
+    .ramo[data-estado="aprobado"] { border-color: #38b000; background: #d9f9d6; }
+    .ramo[data-estado="en_curso"] { border-color: #ffba08; background: #fff7d6; }
+    .ramo[data-estado="pendiente"] { border-color: #d00000; background: #ffe5e5; }
+
+    .prereq {
+      display: none;
+      font-size: 0.9em;
+      color: #555;
+      margin-left: 10px;
+    }
+
+    .ramo:hover .prereq {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Curricular de Turismo y Hotelería</h1>
+
+  <!-- EJEMPLO DE UN PERIODO -->
+  <div class="periodo">
+    <h2>I° PERIODO</h2>
+    <div class="ramo" data-estado="aprobado">Fundamentos de la industria turística</div>
+    <div class="ramo" data-estado="aprobado">Destinos y atractivos turísticos nacionales</div>
+    <div class="ramo" data-estado="aprobado">TICS para el turismo I</div>
+    <div class="ramo" data-estado="aprobado">Habilidades numéricas</div>
+    <div class="ramo" data-estado="aprobado">Habilidades básicas de comunicación</div>
+    <div class="ramo" data-estado="aprobado">Inglés básico</div>
+    <div class="ramo" data-estado="aprobado">Proceso de portafolio 1</div>
+  </div>
+
+  <div class="periodo">
+    <h2>II° PERIODO</h2>
+    <div class="ramo" data-estado="en_curso">Programación turística</div>
+    <div class="ramo" data-estado="en_curso">Técnicas de guiado</div>
+    <div class="ramo" data-estado="en_curso">Destinos patrimoniales mundiales</div>
+    <div class="ramo" data-estado="en_curso">Habilidades del lenguaje matemático
+      <div class="prereq">→ Requiere: Habilidades numéricas</div>
+    </div>
+    <div class="ramo" data-estado="en_curso">Habilidades de comunicación efectiva
+      <div class="prereq">→ Requiere: Habilidades básicas de comunicación</div>
+    </div>
+    <div class="ramo" data-estado="en_curso">Inglés elemental
+      <div class="prereq">→ Requiere: Inglés básico</div>
+    </div>
+    <div class="ramo" data-estado="en_curso">Fundamentos de antropología</div>
+    <div class="ramo" data-estado="en_curso">Proceso de portafolio 2</div>
+  </div>
+
+  <!-- Puedes seguir el mismo formato para los demás periodos... -->
+  <!-- Solo cambia el contenido, colores y prerequisitos -->
+
+</body>
+</html>
 
